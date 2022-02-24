@@ -1,0 +1,87 @@
+@import "../../assets/css/variable";
+.tasks {
+  .input-primary {
+    margin-bottom: 12px;
+    position: relative;
+    input {
+      height: 37;
+      padding: 8px 50px 8px 8px;
+      font-size: 14px;
+      border-radius: 8px;
+      border: 1px solid $gray-border-input;
+      width: 100%;
+      background-color: $white;
+      font-weight: 600;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: #babcc5;
+      }
+    }
+
+    span {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: $red;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &-done {
+    font-weight: bold;
+    color: $red;
+  }
+
+  &-total {
+    font-weight: bold;
+  }
+  &-inform {
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  &-list {
+    padding-left: 2.6rem;
+    li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-right: 20px;
+      // &:hover {
+      //   .remove {
+      //     display: block;
+      //   }
+      // }
+      p {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        cursor: pointer;
+      }
+
+      .done {
+        text-decoration: line-through;
+      }
+
+      .remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        color: $red;
+        font-size: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

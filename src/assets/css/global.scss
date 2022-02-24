@@ -1,0 +1,44 @@
+@import "./_variable.scss";
+@font-face {
+  font-family: "Nutito";
+  src: url("../fonts/Nunito-VariableFont_wght.ttf")
+      format("woff2 supports variations"),
+    url("../fonts/Nunito-VariableFont_wght.ttf") format("woff2-variations");
+  font-weight: 100 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nutito";
+  background-color: $white;
+  font-size: 14px;
+}
+
+.container {
+  width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 800;
+  color: $red;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+  }
+}
