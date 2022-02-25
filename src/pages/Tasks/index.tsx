@@ -34,7 +34,7 @@ export default function Tasks() {
     setTasks(_tasks);
   };
 
-  let taskDone = tasks.filter((item) => item.status === true).length || 0;
+  let unDone = tasks.filter((item) => item.status === false).length || 0;
 
   return (
     <div className="container">
@@ -57,7 +57,7 @@ export default function Tasks() {
         </div>
         <div className="tasks-content">
           <div className="tasks-inform">
-            There are <span className="tasks-done">{taskDone}</span> tasks left
+            There are <span className="tasks-done">{unDone}</span> tasks left
             out of <span className="tasks-total">{tasks.length}</span> tasks
           </div>
           <ul className="tasks-list">
